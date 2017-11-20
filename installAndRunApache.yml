@@ -7,6 +7,8 @@
     apt:
       name: apache2
       state: latest
-  - service:
-    name: apache2
-    state: enabled
+  - name: Run "apache2"
+    service:
+	   name: apache2
+       state: started
+	   enabled: yes
