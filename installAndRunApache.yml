@@ -1,0 +1,13 @@
+---
+- name: Install and run apache
+  hosts: all
+  gather_facts: False
+  tasks:
+  - name: Install the package "apache2"
+    apt:
+      name: apache2
+      state: latest
+  - name: Run "apache2"
+    - service:
+      name: apache2
+      state: enabled
