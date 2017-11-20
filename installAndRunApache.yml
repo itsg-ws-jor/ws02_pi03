@@ -1,6 +1,7 @@
 ---
 - name: Install and run apache
   hosts: all
+  become: yes
   gather_facts: False
   tasks:
   - name: Install the package "apache2"
